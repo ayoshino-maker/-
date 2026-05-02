@@ -37,13 +37,15 @@ const SecondCard=(props: Props)=> {
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
+                    p: 2,
+                    boxSizing: 'border-box',
                     overflow: 'hidden',
                 }}
             >
                 <img
                     src={props.imagePath}
                     alt={props.tile}
-                    style={{ maxHeight: '80%', maxWidth: '80%', width: 'auto', height: 'auto', objectFit: 'contain' }}
+                    style={{ maxHeight: '100%', maxWidth: '100%', width: 'auto', height: 'auto', objectFit: 'contain' }}
                 />
             </Box>
           <Typography sx={{ fontWeight: 600 , fontSize: '14px', textAlign: 'start'}}>
