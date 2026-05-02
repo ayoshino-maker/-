@@ -137,27 +137,38 @@ const App: React.FC = () => {
         <Box
           sx={{
             mx: 'auto',
-            mt: 5,
-            width: '90%',
+            mt: 4,
+            width: '92%',
             backgroundColor: '#FD527B',
-            color: '#FFFFFF',
             transform: 'rotate(-4deg)',
             textAlign: 'center',
-            py: 1.25,
-            px: 2,
+            py: 0.5,
+            px: 1,
             boxShadow: '0 2px 4px rgba(0,0,0,0.08)',
           }}
         >
-          <Typography sx={{ fontSize: 20, fontWeight: 700, color: '#FFFFFF', lineHeight: 1.2 }}>
-            年収{' '}
-            <Box component="span" sx={{ color: '#F8F07C', fontWeight: 900, fontSize: 26, fontFamily: 'Helvetica, sans-serif' }}>
+          <Typography
+            sx={{
+              fontSize: 16,
+              fontWeight: 700,
+              color: '#FFFFFF',
+              lineHeight: 1,
+              whiteSpace: 'nowrap',
+              display: 'flex',
+              alignItems: 'baseline',
+              justifyContent: 'center',
+              gap: 0.5,
+            }}
+          >
+            <span>年収</span>
+            <Box component="span" sx={{ color: '#F8F07C', fontWeight: 900, fontSize: 22, fontFamily: 'Helvetica, sans-serif', lineHeight: 1 }}>
               400
             </Box>
-            {' '}万円からの{' '}
+            <span>万円からの</span>
             <Box component="span" sx={{ color: '#F8F07C', fontWeight: 900 }}>
               高給与
             </Box>
-            {' '}案件!
+            <span>案件!</span>
           </Typography>
         </Box>
       </Container>
