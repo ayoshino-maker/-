@@ -68,11 +68,13 @@ const App: React.FC = () => {
           <CustomButton variant="smallest" />
         </Box>
       </Container>
-      {/* Hero (393px設計をviewport幅にスケール) */}
+      {/* Hero (393px設計をsm幅(600px)で固定スケール) */}
       <Box
         sx={{
           position: 'relative',
           width: '100%',
+          maxWidth: 600,
+          mx: 'auto',
           aspectRatio: '393 / 700',
           containerType: 'inline-size',
           backgroundImage: `url(${heroBg})`,
