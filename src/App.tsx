@@ -69,11 +69,12 @@ const App: React.FC = () => {
         </Box>
       </Container>
       {/* Hero */}
-      <Container
-        maxWidth="sm"
-        disableGutters
+      <Box
         sx={{
           position: 'relative',
+          width: '100%',
+          maxWidth: 393,
+          mx: 'auto',
           minHeight: 700,
           backgroundImage: `url(${heroBg})`,
           backgroundSize: '100% auto',
@@ -83,20 +84,20 @@ const App: React.FC = () => {
         }}
       >
         {/* 装飾画像 (背面レイヤー) */}
-        <Box component="img" src={heroEdited} alt="" sx={{ position: 'absolute', left: '17%', top: 67, width: 118, height: 141, zIndex: 0, pointerEvents: 'none' }} />
-        <Box component="img" src={heroBadge} alt="" sx={{ position: 'absolute', left: '64.9%', top: 128, width: 138, height: 138, zIndex: 0, pointerEvents: 'none' }} />
+        <Box component="img" src={heroEdited} alt="" sx={{ position: 'absolute', left: 67, top: 67, width: 118, height: 141, zIndex: 0, pointerEvents: 'none' }} />
+        <Box component="img" src={heroBadge} alt="" sx={{ position: 'absolute', left: 255, top: 128, width: 138, height: 138, zIndex: 0, pointerEvents: 'none' }} />
 
         {/* メインヒーロー画像 */}
-        <Box component="img" src={heroMain} alt="ちば看護" sx={{ position: 'absolute', left: '50%', top: 346, width: '100%', height: 267, transform: 'translateX(-50%)', objectFit: 'cover', zIndex: 0 }} />
+        <Box component="img" src={heroMain} alt="ちば看護" sx={{ position: 'absolute', left: 0, top: 346, width: 393, height: 267, objectFit: 'cover', zIndex: 0 }} />
 
         {/* ポラロイド風カード */}
-        <Box sx={{ position: 'absolute', left: '3.6%', top: 496, width: 183, height: 122, transform: 'rotate(-3.1deg)', zIndex: 1, border: '4px solid #FFFFFF', boxShadow: '0 4px 4px rgba(0,0,0,0.25)', overflow: 'hidden' }}>
+        <Box sx={{ position: 'absolute', left: 14, top: 496, width: 183, height: 122, transform: 'rotate(-3.1deg)', zIndex: 1, border: '4px solid #FFFFFF', boxShadow: '0 4px 4px rgba(0,0,0,0.25)', overflow: 'hidden' }}>
           <Box component="img" src={heroPolaroid} alt="" sx={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
         </Box>
 
         {/* 看護師写真 */}
-        <Box component="img" src={heroNurse1} alt="" sx={{ position: 'absolute', left: '61.1%', top: 585, width: 92, height: 89, zIndex: 1 }} />
-        <Box component="img" src={heroNurse2} alt="" sx={{ position: 'absolute', left: '77.6%', top: 605, width: 72, height: 72, zIndex: 2 }} />
+        <Box component="img" src={heroNurse1} alt="" sx={{ position: 'absolute', left: 240, top: 585, width: 92, height: 89, zIndex: 1 }} />
+        <Box component="img" src={heroNurse2} alt="" sx={{ position: 'absolute', left: 305, top: 605, width: 72, height: 72, zIndex: 2 }} />
 
         {/* 回転コールアウトカード */}
         <Box
@@ -196,7 +197,7 @@ const App: React.FC = () => {
             <span>案件!</span>
           </Typography>
         </Box>
-      </Container>
+      </Box>
 
       {/* SecondSection */}
       <Container maxWidth="sm" sx={{ pt: 6, }}>
