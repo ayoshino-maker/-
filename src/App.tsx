@@ -151,6 +151,7 @@ const App: React.FC = () => {
             </Typography>
             <Stack spacing={1} sx={{ px: 2 }}>
               <ThirdCard description={"千葉で転職したいけど、\nどの求人がいいか分からない"} />
+              <ThirdCard description={"エージェントに登録したら、\nしつこく電話がきそうで不安"} />
               <ThirdCard description={"都内勤務と千葉勤務、\nどちらが自分に合うのか分からない"} />
               <ThirdCard description={"人間関係や職場の雰囲気など、\n求人票に書いていない情報が知りたい"} />
             </Stack>
