@@ -170,7 +170,7 @@ const App: React.FC = () => {
 
       <Container maxWidth="sm" sx={{ px: {xs: 0},pt: 5 , display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <Box component="span"  sx={{py: 1, px: 4,      width: "fit-content", height: "fit-content", display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '16px', backgroundColor: '#604045'}}>
-          <Typography sx={{fontSize: 14, fontWeight: 600, color: '#FFFFFF', textAlign: 'center', letterSpacing: '6px' }}>
+          <Typography sx={{fontSize: 14, fontWeight: 600, color: '#FFFFFF', textAlign: 'center', letterSpacing: '4.2px' }}>
             その転職のお悩み
           </Typography>
         </Box>
