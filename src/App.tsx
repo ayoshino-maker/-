@@ -21,7 +21,7 @@ import hearing from "./assets/img/hearing.png";
 import introduceApplication from "./assets/img/introduceApplication.png";
 import interview from "./assets/img/interview.png";
 import huntedJob from "./assets/img/huntedJob.png";
-import tenthSectionImg from "./assets/img/tenthSectionImg.png";
+import tenthSectionImg from "./assets/img/resume.svg";
 import waveLine from "./assets/img/waveLine.png";
 import handShake from "./assets/img/handShake.png";
 import logo from "./assets/img/logo.png";
