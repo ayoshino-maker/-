@@ -109,8 +109,8 @@ const App: React.FC = () => {
         </Box>
 
         {/* 看護師写真 */}
-        <Box component="img" src={heroNurse1} alt="" sx={{ position: 'absolute', left: 240, top: 548, width: 92, height: 89, zIndex: 1 }} />
-        <Box component="img" src={heroNurse2} alt="" sx={{ position: 'absolute', left: 305, top: 568, width: 72, height: 72, zIndex: 2 }} />
+        <Box component="img" src={heroNurse1} alt="" sx={{ position: 'absolute', left: 240, top: 548, width: 92, height: 89, zIndex: 6 }} />
+        <Box component="img" src={heroNurse2} alt="" sx={{ position: 'absolute', left: 305, top: 568, width: 72, height: 72, zIndex: 7 }} />
 
         {/* 年収リボンバナー(下層) */}
         <Box
