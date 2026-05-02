@@ -24,9 +24,8 @@ import huntedJob from "./assets/img/huntedJob.png";
 import tenthSectionImg from "./assets/img/resume.svg";
 import waveLine from "./assets/img/waveLine.png";
 import handShake from "./assets/img/handShake.png";
-import logo from "./assets/img/logo.png";
-import tibaPrefecture from "./assets/img/tibaPrefectureMap.png";
-import topManImage from "./assets/img/topManImage.png";
+import heroLogo from "./assets/img/heroLogo.png";
+import heroBg from "./assets/img/heroBg.svg";
 import semiEclipse from "./assets/img/semiEllipse.png";
 import agreement from "./assets/img/agreement.svg";
 import FifthCard from "./components/fifth/FifthCard";
@@ -36,7 +35,6 @@ import CustomButton from "./components/shared/buttons/CustomButton";
 import EighthCard from "./components/eighth/EighthCard";
 import NinthCard from "./components/ninth/NinthCard";
 import Footer from "./components/shared/footer/Footer";
-import FirstCard from "./components/first/FirstCard";
 
 const App: React.FC = () => {
   return (
@@ -44,60 +42,40 @@ const App: React.FC = () => {
         flexDirection: "column",      // 子を縦方向に並べる
         alignItems: "center",}}>
       {/* header */}
-      <Box maxWidth="sm" sx={{py: 2, width: "100%", display: "flex", alignItems: "center", justifyContent: 'space-between'}}>
-        <img src={logo} alt="header logo" style={{height: 22, padding: 12}}/>
-        <Box sx={{px: 3/2}}>
-          <CustomButton variant="smallest"/>
+      <Container
+        maxWidth="sm"
+        disableGutters
+        sx={{
+          position: 'sticky',
+          top: 0,
+          zIndex: 10,
+          py: 1,
+          backgroundColor: 'rgba(255,255,255,0.7)',
+          backdropFilter: 'blur(4px)',
+          display: "flex",
+          alignItems: "center",
+          justifyContent: 'space-between',
+        }}
+      >
+        <img src={heroLogo} alt="ちば看護" style={{ height: 17, padding: '0 12px' }} />
+        <Box sx={{ px: 3/2 }}>
+          <CustomButton variant="smallest" />
         </Box>
-      </Box>
+      </Container>
       {/* Hero */}
-      <Container maxWidth="sm" sx={{ px: 0}}>
-      <Box sx={{bgcolor: "#EAF3FF",backgroundImage: `url(${tibaPrefecture})`,backgroundPosition: "center", backgroundSize: "contain", overflow: "hidden", width: "100%", backgroundRepeat: "no-repeat"}}>
-        <Box position="relative">
-          <img src={topManImage} alt="トップ画像" style={{position: "absolute", bottom: 0, left: "50%", transform: "translateX(-50%)" }} />
-        <Stack spacing={3} sx={{px: 7/2, py: 7/2}}>
-          <Typography
-            fontWeight={800}
-            fontSize={24}
-          >
-            千葉
-            <Typography
-              component="span"
-              fontSize={18}
-              fontWeight={800}
-            >
-              で働く
-            </Typography>
-            看護師の、<br/>後悔
-            <Typography
-              component="span"
-              fontSize={18}
-              fontWeight={800}
-            >
-              しない
-            </Typography>
-            選択
-          </Typography>
-          <img src={logo} alt="ちば看護ロゴ"/>
-          <Typography
-            variant="body2"
-            textAlign="left"
-            sx={{ fontWeight: 600, fontSize: 12, whiteSpace: 'pre-wrap', color: '#192C89' }}
-          >
-            千葉県に特化した看護師専門転職エージェントです。<br/>「とりあえず登録」ではなく、<br/>あなたに合う職場だけを厳選して紹介します。
-          </Typography>
-
-          <Box sx={{ display: 'flex', flexDirection: 'row', gap: '3.05vw', justifyContent: 'center' }}>
-            <FirstCard mdTitle={"千葉県"} smTitle={"だけの\n求人を厳選"}/>
-            <FirstCard mdTitle={"千葉県在住"} smTitle={"\nスタッフが\n一貫サポート"}/>
-            <FirstCard firstSmTitle={"千葉県内の\n"} mdTitle={"非公開求人"} smTitle={"\n多数取扱あり"}/>
-          </Box>
-          <Box sx={{pt: 24, display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%'}}>
-            <CustomButton variant="large" />
-          </Box>
-        </Stack>
-        </Box>
-      </Box>
+      <Container
+        maxWidth="sm"
+        disableGutters
+        sx={{
+          position: 'relative',
+          minHeight: 700,
+          backgroundImage: `url(${heroBg})`,
+          backgroundSize: '100% auto',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'top center',
+        }}
+      >
+        {/* Hero content will be rebuilt in subsequent phases */}
       </Container>
 
       {/* SecondSection */}
