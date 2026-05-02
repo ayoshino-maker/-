@@ -27,7 +27,7 @@ import handShake from "./assets/img/handShake.png";
 import logo from "./assets/img/logo.png";
 import tibaPrefecture from "./assets/img/tibaPrefectureMap.png";
 import topManImage from "./assets/img/topManImage.png";
-import waveBottom from "./assets/img/waveBottom.png";
+import semiEclipse from "./assets/img/semiEllipse.png";
 import agreement from "./assets/img/agreement.svg";
 import FifthCard from "./components/fifth/FifthCard";
 import SixthCard from "./components/sixth/SixthCard";
@@ -279,33 +279,28 @@ const App: React.FC = () => {
           </Typography>
         </Stack>
       </Container>
-      <Container
+      <Box
         maxWidth="sm"
-        disableGutters
         sx={{
-          position: 'relative',
+          position: 'relative',     // 子のabsolute配置の基準
+          width: '100%',
         }}
       >
-        <Box
-          component="img"
-          src={waveBottom}
-          alt="Wave"
-          sx={{ display: 'block', width: '100%', height: 'auto' }}
-        />
-        <Box
-          component="img"
-          src={agreement}
-          alt="Agreement"
-          sx={{
-            width: "149px",
-            height: "169px",
-            position: 'absolute',
-            left: '50%',
-            bottom: 16,
-            transform: 'translateX(-50%)',
-          }}
-        />
-      </Container>
+      <img src={semiEclipse} alt="Semi Eclipse" style={{ position: 'relative', left: '50%', transform: 'translateX(-50%)', width: '100%', height: 'auto', }} />
+      <Box
+        component="img"
+        src={agreement}
+        alt="Agreement"
+        sx={{
+          width: "149px",
+          height: "169px",
+          position: 'absolute',
+          left: '50%',
+          bottom: 16,
+          transform: 'translateX(-50%)',
+        }}
+      />
+      </Box>
 
       {/* SeventhSection */}
       <Container maxWidth="sm" sx={{ pt: 6 }}>
