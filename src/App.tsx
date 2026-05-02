@@ -322,22 +322,19 @@ const App: React.FC = () => {
               tile={"千葉県内に特化したエージェント"}
               description={"千葉県に根ざした独自ネットワークで、病院、クリニック、介護施設、訪問看護など幅広い求\n人をご提案します。"}
               imagePath={secondSectionFirstImg}
-              imageWidth={126}
-              imageHeight={156}
+              imageWidthPercent={41}
             />
             <SecondCard
               tile={"地域事情・職場内の雰囲気までご提案"}
               description={"各施設の雰囲気や人間関係、忙しさなど、求人票では分からない内部情報までお伝えします。"}
               imagePath={secondSectionSecondImg}
-              imageWidth={198}
-              imageHeight={140}
+              imageWidthPercent={64}
             />
             <SecondCard
               tile={"応募から入職後まで一貫サポート"}
               description={"面談・書類添削・条件交渉から入職後の悩み相談まで、千葉在住の担当が継続して支援します。"}
               imagePath={secondSectionThirdImg}
-              imageWidth={168}
-              imageHeight={152}
+              imageWidthPercent={54}
             />
             </Stack>
         </Stack>
