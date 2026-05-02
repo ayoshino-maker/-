@@ -96,26 +96,26 @@ const App: React.FC = () => {
         }}
       >
         {/* 装飾画像 (背面レイヤー) */}
-        <Box component="img" src={heroEdited} alt="" sx={{ position: 'absolute', left: 67, top: 30, width: 118, height: 141, zIndex: 0, pointerEvents: 'none' }} />
+        <Box component="img" src={heroEdited} alt="" sx={{ position: 'absolute', left: 67, top: 10, width: 118, height: 141, zIndex: 0, pointerEvents: 'none' }} />
 
         {/* メインヒーロー画像 */}
-        <Box component="img" src={heroMain} alt="ちば看護" sx={{ position: 'absolute', left: 0, top: 346, width: 393, height: 267, objectFit: 'cover', zIndex: 0 }} />
+        <Box component="img" src={heroMain} alt="ちば看護" sx={{ position: 'absolute', left: 0, top: 326, width: 393, height: 267, objectFit: 'cover', zIndex: 0 }} />
 
         {/* ポラロイド風カード */}
-        <Box sx={{ position: 'absolute', left: 14, top: 496, width: 183, height: 122, transform: 'rotate(-3.1deg)', zIndex: 1, border: '4px solid #FFFFFF', boxShadow: '0 4px 4px rgba(0,0,0,0.25)', overflow: 'hidden' }}>
+        <Box sx={{ position: 'absolute', left: 14, top: 476, width: 183, height: 122, transform: 'rotate(-3.1deg)', zIndex: 1, border: '4px solid #FFFFFF', boxShadow: '0 4px 4px rgba(0,0,0,0.25)', overflow: 'hidden' }}>
           <Box component="img" src={heroPolaroid} alt="" sx={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
         </Box>
 
         {/* 看護師写真 */}
-        <Box component="img" src={heroNurse1} alt="" sx={{ position: 'absolute', left: 240, top: 585, width: 92, height: 89, zIndex: 1 }} />
-        <Box component="img" src={heroNurse2} alt="" sx={{ position: 'absolute', left: 305, top: 605, width: 72, height: 72, zIndex: 2 }} />
+        <Box component="img" src={heroNurse1} alt="" sx={{ position: 'absolute', left: 240, top: 565, width: 92, height: 89, zIndex: 1 }} />
+        <Box component="img" src={heroNurse2} alt="" sx={{ position: 'absolute', left: 305, top: 585, width: 72, height: 72, zIndex: 2 }} />
 
         {/* 年収リボンバナー(下層) */}
         <Box
           sx={{
             position: 'absolute',
             left: -4,
-            top: 194,
+            top: 174,
             width: 'auto',
             zIndex: 2,
             pointerEvents: 'none',
@@ -156,7 +156,7 @@ const App: React.FC = () => {
           sx={{
             position: 'absolute',
             left: -18,
-            top: 227,
+            top: 207,
             width: 429,
             height: 147,
             display: 'flex',
@@ -223,7 +223,7 @@ const App: React.FC = () => {
         </Box>
 
         {/* 千葉県密着実績 No.1 バッジ (最前面) */}
-        <Box component="img" src={heroBadge} alt="千葉県密着実績 No.1" sx={{ position: 'absolute', left: 272, top: 128, width: 120, height: 120, zIndex: 4, pointerEvents: 'none' }} />
+        <Box component="img" src={heroBadge} alt="千葉県密着実績 No.1" sx={{ position: 'absolute', left: 272, top: 108, width: 120, height: 120, zIndex: 4, pointerEvents: 'none' }} />
       </Box>
       </Box>
 
