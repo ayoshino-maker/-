@@ -5,9 +5,9 @@ import {
   Typography,
   Stack,
 } from "@mui/material";
-import secondSectionFirstImg from "./assets/img/secondSectionFirstImg.png";
-import secondSectionSecondImg from "./assets/img/secondSectionSecondFrameImg.png"
-import secondSectionThirdImg from "./assets/img/secondSectionThirdImg.png"
+import secondSectionFirstImg from "./assets/img/location.svg";
+import secondSectionSecondImg from "./assets/img/medicine.svg";
+import secondSectionThirdImg from "./assets/img/sharing.svg";
 import SecondCard from "./components/second/SecondCard";
 import ThirdCard from "./components/third/ThirdCard";
 import triangle from "./assets/img/triangle.png";
@@ -113,7 +113,7 @@ const App: React.FC = () => {
           <Stack spacing={2} sx={{ py: 3 }}>
             <SecondCard 
               tile={"千葉県内に特化したエージェント"} 
-              description={"千葉県に根ざした独自ネットワークで、病院、クリニック、介護施設、訪問看護まで幅広い求\n人をご提案します。"} 
+              description={"千葉県に根ざした独自ネットワークで、病院、クリニック、介護施設、訪問看護など幅広い求\n人をご提案します。"}
               imagePath={secondSectionFirstImg}
             />
             <SecondCard 

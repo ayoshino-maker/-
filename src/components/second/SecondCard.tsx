@@ -28,7 +28,24 @@ const SecondCard=(props: Props)=> {
                     {props.tile}
                 </Typography>
             </Box>
-            <img src={props.imagePath} alt={props.tile} style={{ width: '100%', height: 'auto' }} />
+            <Box
+                sx={{
+                    width: '100%',
+                    height: 200,
+                    backgroundColor: '#DCF5FF',
+                    borderRadius: '8px',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    overflow: 'hidden',
+                }}
+            >
+                <img
+                    src={props.imagePath}
+                    alt={props.tile}
+                    style={{ height: '78%', width: 'auto', maxWidth: '70%', objectFit: 'contain' }}
+                />
+            </Box>
           <Typography sx={{ fontWeight: 600 , fontSize: '14px', textAlign: 'start'}}>
             {props.description}
           </Typography>
