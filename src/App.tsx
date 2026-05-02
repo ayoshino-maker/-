@@ -339,11 +339,11 @@ const App: React.FC = () => {
           </Typography>
           {/* ここで親の Stack に width: '100%' を指定 */}
           <Stack spacing={1} sx={{ width: "100%", px: 5/2}}>
-            <EighthCard stepText={"STEP 01"} description={"無料登録"} iconUrl={freeRegister} />
-            <EighthCard stepText={"STEP 02"} description={"ヒアリング"} subDescription={"（電話・オンライン可）"} iconUrl={hearing} />
-            <EighthCard stepText={"STEP 03"} description={"求人紹介"} iconUrl={introduceApplication} />
-            <EighthCard stepText={"STEP 04"} description={"面接・条件交渉"} iconUrl={interview} />
-            <EighthCard stepText={"STEP 05"} description={"内定・入職"} iconUrl={huntedJob} />
+            <EighthCard stepText={"STEP 1"} description={"無料登録"} iconUrl={freeRegister} />
+            <EighthCard stepText={"STEP 2"} description={"ヒアリング"} subDescription={"（電話・オンライン可）"} iconUrl={hearing} />
+            <EighthCard stepText={"STEP 3"} description={"求人紹介"} iconUrl={introduceApplication} />
+            <EighthCard stepText={"STEP 4"} description={"面接・条件交渉"} iconUrl={interview} />
+            <EighthCard stepText={"STEP 5"} description={"内定・入職"} iconUrl={huntedJob} />
           </Stack>
           <CustomButton />
         </Stack>
