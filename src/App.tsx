@@ -28,7 +28,7 @@ import logo from "./assets/img/logo.png";
 import tibaPrefecture from "./assets/img/tibaPrefectureMap.png";
 import topManImage from "./assets/img/topManImage.png";
 import semiEclipse from "./assets/img/semiEllipse.png";
-import construct from "./assets/img/construct.png";
+import agreement from "./assets/img/agreement.svg";
 import FifthCard from "./components/fifth/FifthCard";
 import SixthCard from "./components/sixth/SixthCard";
 import SeventhCard from "./components/seventh/SeventhCard";
@@ -289,14 +289,15 @@ const App: React.FC = () => {
       <img src={semiEclipse} alt="Semi Eclipse" style={{ position: 'relative', left: '50%', transform: 'translateX(-50%)', width: '100%', height: 'auto', }} />
       <Box
         component="img"
-        src={construct}            // 例: import newImage from '...';
-        alt="New Image"
+        src={agreement}
+        alt="Agreement"
         sx={{
           width: "149px",
+          height: "169px",
           position: 'absolute',
-          left: '50%',            
-          bottom: 16,             
-          transform: 'translateX(-50%)', // 画像幅の半分だけ戻して中央揃え
+          left: '50%',
+          bottom: 16,
+          transform: 'translateX(-50%)',
         }}
       />
       </Box>
