@@ -223,7 +223,7 @@ const App: React.FC = () => {
         </Box>
 
         {/* 千葉県密着実績 No.1 バッジ (最前面) */}
-        <Box component="img" src={heroBadge} alt="千葉県密着実績 No.1" sx={{ position: 'absolute', left: 255, top: 50, width: 138, height: 138, zIndex: 4, pointerEvents: 'none' }} />
+        <Box component="img" src={heroBadge} alt="千葉県密着実績 No.1" sx={{ position: 'absolute', left: 295, top: 128, width: 90, height: 90, zIndex: 4, pointerEvents: 'none' }} />
       </Box>
       </Box>
 
