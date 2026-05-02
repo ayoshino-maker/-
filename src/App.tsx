@@ -316,7 +316,7 @@ const App: React.FC = () => {
             <SeventhCard 
               circleImageUrl={seventhSectionFirstFaceImg} 
               jobTitle={"30代女性　病棟看護師（千葉市）"} 
-              jobDescription={"夜勤が辛く転職。日勤のみのクリニックへ。\n年収はほぼ維持、生活リズムは改善しました。\n大手転職サイトのような、しつこい電話など\n一切なくやりとりがスムーズでした"}
+              jobDescription={"夜勤が辛く転職。日勤のみのクリニックへ。\n年収はほぼ維持、生活リズムは改善しました。"}
             />
             <SeventhCard 
               circleImageUrl={seventhSectionSecondFaceImg} 
