@@ -40,7 +40,7 @@ jobs:
           protocol: ftps
           port: 21
           local-dir: ./build/
-          server-dir: ${{ secrets.XSERVER_REMOTE_DIR }}
+          server-dir: ./public_html/lp.chiba-kango.com/
           dangerous-clean-slate: false
           exclude: |
             **/.git*
