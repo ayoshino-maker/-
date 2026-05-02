@@ -32,6 +32,8 @@ import heroPolaroid from "./assets/img/heroPolaroid.png";
 import heroNurse1 from "./assets/img/heroNurse1.png";
 import heroNurse2 from "./assets/img/heroNurse2.png";
 import heroBadge from "./assets/img/heroBadge.png";
+import lineIconLarge from "./assets/img/lineIconLarge.svg";
+import checkmark from "./assets/img/checkmark.svg";
 import semiEclipse from "./assets/img/semiEllipse.png";
 import agreement from "./assets/img/agreement.svg";
 import FifthCard from "./components/fifth/FifthCard";
@@ -220,6 +222,84 @@ const App: React.FC = () => {
               で理想の職場へ!
             </Typography>
           </Box>
+        </Box>
+
+        {/* 3つの白チェックバッジ */}
+        <Box sx={{ position: 'absolute', left: 12, top: 342, display: 'flex', flexDirection: 'column', gap: '4px', alignItems: 'flex-start', zIndex: 3 }}>
+          {['完全無料', 'LINEで簡単相談', '非公開求人多数'].map((label) => (
+            <Box
+              key={label}
+              sx={{
+                backgroundColor: '#FFFFFF',
+                filter: 'drop-shadow(0px 2px 2px rgba(0,0,0,0.25))',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '10px',
+                px: '8px',
+                py: '2px',
+                borderRadius: '2px',
+              }}
+            >
+              <Box component="img" src={checkmark} alt="" sx={{ width: 18, height: 18 }} />
+              <Typography sx={{ fontWeight: 700, fontSize: 18, color: '#303030', lineHeight: 1.5, whiteSpace: 'nowrap' }}>
+                {label}
+              </Typography>
+            </Box>
+          ))}
+        </Box>
+
+        {/* 緑LINE CTA ボタン */}
+        <Box
+          component="a"
+          href="https://lin.ee/QuLYzOh"
+          target="_blank"
+          rel="noopener noreferrer"
+          sx={{
+            position: 'absolute',
+            left: 'calc(50% + 1px)',
+            top: 622,
+            transform: 'translateX(-50%)',
+            width: 345,
+            backgroundColor: '#289E4B',
+            boxShadow: '0 4px 0 #157815',
+            borderRadius: '40px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: '8px',
+            px: '24px',
+            py: '8px',
+            textDecoration: 'none',
+            zIndex: 3,
+            cursor: 'pointer',
+            '&:hover': { backgroundColor: '#22853f' },
+          }}
+        >
+          <Box component="img" src={lineIconLarge} alt="" sx={{ width: 36, height: 36 }} />
+          <Typography sx={{ fontWeight: 700, fontSize: 16, color: '#FFFFFF', lineHeight: 1.46 }}>
+            LINEで専任アドバイザーに相談
+          </Typography>
+        </Box>
+
+        {/* 黄色吹き出しタグ (緑CTAの前面に表示) */}
+        <Box
+          sx={{
+            position: 'absolute',
+            left: 'calc(50% - 29.5px)',
+            top: 604,
+            transform: 'translateX(-50%)',
+            backgroundColor: '#F9F396',
+            border: '2px solid #FFF344',
+            borderRadius: '6px',
+            boxShadow: '0 4px 4px rgba(0,0,0,0.25)',
+            px: '8px',
+            py: '4px',
+            zIndex: 5,
+          }}
+        >
+          <Typography sx={{ fontWeight: 700, fontSize: 12, color: '#303030', lineHeight: 1.46, whiteSpace: 'nowrap' }}>
+            無料でスマホで相談OK!
+          </Typography>
         </Box>
 
         {/* 千葉県密着実績 No.1 バッジ (最前面) */}
