@@ -43,7 +43,7 @@ const SecondCard=(props: Props)=> {
                 <img
                     src={props.imagePath}
                     alt={props.tile}
-                    style={{ height: '78%', width: 'auto', maxWidth: '70%', objectFit: 'contain' }}
+                    style={{ maxHeight: '80%', maxWidth: '80%', width: 'auto', height: 'auto', objectFit: 'contain' }}
                 />
             </Box>
           <Typography sx={{ fontWeight: 600 , fontSize: '14px', textAlign: 'start'}}>
