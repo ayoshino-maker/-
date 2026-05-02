@@ -26,6 +26,12 @@ import waveLine from "./assets/img/waveLine.png";
 import handShake from "./assets/img/handShake.png";
 import heroLogo from "./assets/img/heroLogo.png";
 import heroBg from "./assets/img/heroBg.svg";
+import heroMain from "./assets/img/heroMain.png";
+import heroEdited from "./assets/img/heroEdited.png";
+import heroPolaroid from "./assets/img/heroPolaroid.png";
+import heroNurse1 from "./assets/img/heroNurse1.png";
+import heroNurse2 from "./assets/img/heroNurse2.png";
+import heroBadge from "./assets/img/heroBadge.png";
 import semiEclipse from "./assets/img/semiEllipse.png";
 import agreement from "./assets/img/agreement.svg";
 import FifthCard from "./components/fifth/FifthCard";
@@ -73,11 +79,30 @@ const App: React.FC = () => {
           backgroundSize: '100% auto',
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'top center',
+          overflow: 'hidden',
         }}
       >
+        {/* 装飾画像 (背面レイヤー) */}
+        <Box component="img" src={heroEdited} alt="" sx={{ position: 'absolute', left: '17%', top: 67, width: 118, height: 141, zIndex: 0, pointerEvents: 'none' }} />
+        <Box component="img" src={heroBadge} alt="" sx={{ position: 'absolute', left: '64.9%', top: 128, width: 138, height: 138, zIndex: 0, pointerEvents: 'none' }} />
+
+        {/* メインヒーロー画像 */}
+        <Box component="img" src={heroMain} alt="ちば看護" sx={{ position: 'absolute', left: '50%', top: 346, width: '100%', height: 267, transform: 'translateX(-50%)', objectFit: 'cover', zIndex: 0 }} />
+
+        {/* ポラロイド風カード */}
+        <Box sx={{ position: 'absolute', left: '3.6%', top: 496, width: 183, height: 122, transform: 'rotate(-3.1deg)', zIndex: 1, border: '4px solid #FFFFFF', boxShadow: '0 4px 4px rgba(0,0,0,0.25)', overflow: 'hidden' }}>
+          <Box component="img" src={heroPolaroid} alt="" sx={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+        </Box>
+
+        {/* 看護師写真 */}
+        <Box component="img" src={heroNurse1} alt="" sx={{ position: 'absolute', left: '61.1%', top: 585, width: 92, height: 89, zIndex: 1 }} />
+        <Box component="img" src={heroNurse2} alt="" sx={{ position: 'absolute', left: '77.6%', top: 605, width: 72, height: 72, zIndex: 2 }} />
+
         {/* 回転コールアウトカード */}
         <Box
           sx={{
+            position: 'relative',
+            zIndex: 3,
             mx: 'auto',
             mt: 3,
             width: 'fit-content',
@@ -134,6 +159,8 @@ const App: React.FC = () => {
         {/* 年収リボンバナー */}
         <Box
           sx={{
+            position: 'relative',
+            zIndex: 3,
             mx: 'auto',
             mt: 4,
             width: '92%',
