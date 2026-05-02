@@ -250,10 +250,10 @@ const App: React.FC = () => {
       {/* SixthSection */}
       <Container maxWidth="sm" sx={{ mt: 6,pt: 4, px: 2, backgroundColor: "#FEF0F6" }}>
         <Stack spacing={3} alignItems="center">
-          <Typography  
-            fontWeight="bold" 
-            textAlign="center" 
-            sx={{ fontSize: 20, color: "#3448AC" }}
+          <Typography
+            fontWeight="bold"
+            textAlign="center"
+            sx={{ fontSize: 20, color: "#192C89" }}
           >
             ちば看護が選ばれる理由
           </Typography>
