@@ -156,7 +156,7 @@ const App: React.FC = () => {
           sx={{
             position: 'absolute',
             left: -18,
-            top: 190,
+            top: 178,
             width: 429,
             height: 147,
             display: 'flex',
@@ -171,7 +171,7 @@ const App: React.FC = () => {
               width: 422,
               backgroundColor: '#FFFFFF',
               pt: '12px',
-              pb: '34px',
+              pb: '12px',
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
