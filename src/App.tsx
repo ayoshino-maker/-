@@ -99,103 +99,123 @@ const App: React.FC = () => {
         <Box component="img" src={heroNurse1} alt="" sx={{ position: 'absolute', left: 240, top: 585, width: 92, height: 89, zIndex: 1 }} />
         <Box component="img" src={heroNurse2} alt="" sx={{ position: 'absolute', left: 305, top: 605, width: 72, height: 72, zIndex: 2 }} />
 
-        {/* 回転コールアウトカード */}
+        {/* 年収リボンバナー(下層) */}
         <Box
           sx={{
-            position: 'relative',
-            zIndex: 3,
-            mx: 'auto',
-            mt: 3,
-            width: 'fit-content',
-            backgroundColor: '#FFFFFF',
-            borderRadius: '8px',
-            boxShadow: '0 2px 6px rgba(0,0,0,0.08)',
-            px: 2,
-            py: 2,
-            transform: 'rotate(-4deg)',
-            textAlign: 'center',
+            position: 'absolute',
+            left: -4,
+            top: 194,
+            width: 280,
+            height: 62,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            zIndex: 2,
+            pointerEvents: 'none',
           }}
         >
-          <Typography sx={{ color: '#303030', fontWeight: 700, fontSize: 18, lineHeight: 1.4 }}>
-            今の職場と同じ時間で、
-          </Typography>
-          <Box sx={{ position: 'relative', display: 'inline-block', mt: 0.5 }}>
-            <Typography
-              sx={{
-                color: 'rgba(255,41,93,0.8)',
-                fontWeight: 700,
-                fontSize: 18,
-                lineHeight: 1.4,
-                position: 'relative',
-                zIndex: 1,
-              }}
-            >
-              残業少なめ、ライフスタイル重視!
-            </Typography>
-            <Box
-              aria-hidden
-              sx={{
-                position: 'absolute',
-                bottom: 4,
-                left: 0,
-                right: 0,
-                height: '10px',
-                backgroundColor: 'rgba(248, 240, 124, 0.8)',
-                pointerEvents: 'none',
-                zIndex: 0,
-              }}
-            />
-          </Box>
-          <Typography sx={{ mt: 1.5, color: '#303030', fontWeight: 700, fontSize: 22, lineHeight: 1.3 }}>
-            <Box
-              component="span"
-              sx={{ color: 'rgba(255,41,93,0.8)', fontWeight: 900, fontSize: 26 }}
-            >
-              ちば看護
-            </Box>
-            で理想の職場へ!
-          </Typography>
-        </Box>
-
-        {/* 年収リボンバナー */}
-        <Box
-          sx={{
-            position: 'relative',
-            zIndex: 3,
-            mx: 'auto',
-            mt: 4,
-            width: '92%',
-            backgroundColor: '#FD527B',
-            transform: 'rotate(-4deg)',
-            textAlign: 'center',
-            py: 0.5,
-            px: 1,
-            boxShadow: '0 2px 4px rgba(0,0,0,0.08)',
-          }}
-        >
-          <Typography
+          <Box
             sx={{
-              fontSize: 16,
-              fontWeight: 700,
-              color: '#FFFFFF',
-              lineHeight: 1,
-              whiteSpace: 'nowrap',
+              transform: 'rotate(-4deg)',
+              backgroundColor: '#FD527B',
+              px: 2,
+              py: '2px',
               display: 'flex',
-              alignItems: 'baseline',
+              alignItems: 'center',
               justifyContent: 'center',
-              gap: 0.5,
             }}
           >
-            <span>年収</span>
-            <Box component="span" sx={{ color: '#F8F07C', fontWeight: 900, fontSize: 22, fontFamily: 'Helvetica, sans-serif', lineHeight: 1 }}>
-              400
+            <Typography
+              sx={{
+                fontSize: 16,
+                fontWeight: 700,
+                color: '#FFFFFF',
+                lineHeight: 1.5,
+                whiteSpace: 'nowrap',
+              }}
+            >
+              年収{' '}
+              <Box component="span" sx={{ color: '#F8F07C', fontWeight: 900, fontSize: 26, fontFamily: 'Helvetica, sans-serif' }}>
+                400
+              </Box>
+              {' '}万円からの{' '}
+              <Box component="span" sx={{ color: '#F8F07C' }}>
+                高給与
+              </Box>
+              {' '}案件!
+            </Typography>
+          </Box>
+        </Box>
+
+        {/* 回転コールアウトカード(前面) */}
+        <Box
+          sx={{
+            position: 'absolute',
+            left: -18,
+            top: 227,
+            width: 429,
+            height: 147,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            zIndex: 3,
+          }}
+        >
+          <Box
+            sx={{
+              transform: 'rotate(-4deg)',
+              width: 422,
+              backgroundColor: '#FFFFFF',
+              pt: '12px',
+              pb: '34px',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              justifyContent: 'center',
+              overflow: 'hidden',
+            }}
+          >
+            <Typography sx={{ color: '#303030', fontWeight: 700, fontSize: 20, lineHeight: 1.46, whiteSpace: 'nowrap', mb: '-22px' }}>
+              今の職場と同じ時間で、
+            </Typography>
+            <Box sx={{ position: 'relative', display: 'inline-block', mt: '24px' }}>
+              <Typography
+                sx={{
+                  color: 'rgba(255,41,93,0.8)',
+                  fontWeight: 700,
+                  fontSize: 20,
+                  lineHeight: 1.46,
+                  whiteSpace: 'nowrap',
+                  position: 'relative',
+                  zIndex: 1,
+                }}
+              >
+                残業少なめ、ライフスタイル重視!
+              </Typography>
+              <Box
+                aria-hidden
+                sx={{
+                  position: 'absolute',
+                  bottom: 2,
+                  left: 0,
+                  right: 0,
+                  height: '10px',
+                  backgroundColor: 'rgba(248, 240, 124, 0.8)',
+                  pointerEvents: 'none',
+                  zIndex: 0,
+                }}
+              />
             </Box>
-            <span>万円からの</span>
-            <Box component="span" sx={{ color: '#F8F07C', fontWeight: 900 }}>
-              高給与
-            </Box>
-            <span>案件!</span>
-          </Typography>
+            <Typography sx={{ mt: '4px', color: '#303030', fontWeight: 700, fontSize: 24, lineHeight: 1.46, whiteSpace: 'nowrap' }}>
+              <Box
+                component="span"
+                sx={{ color: 'rgba(255,41,93,0.8)', fontWeight: 900, fontSize: 28 }}
+              >
+                ちば看護
+              </Box>
+              で理想の職場へ!
+            </Typography>
+          </Box>
         </Box>
       </Box>
 
