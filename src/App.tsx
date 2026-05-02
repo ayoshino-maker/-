@@ -115,7 +115,6 @@ const App: React.FC = () => {
                 right: 0,
                 height: '10px',
                 backgroundColor: 'rgba(248, 240, 124, 0.8)',
-                transform: 'rotate(3.48deg)',
                 pointerEvents: 'none',
                 zIndex: 0,
               }}
