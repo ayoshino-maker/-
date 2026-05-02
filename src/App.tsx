@@ -26,7 +26,6 @@ import waveLine from "./assets/img/waveLine.png";
 import handShake from "./assets/img/handShake.png";
 import heroLogo from "./assets/img/heroLogo.png";
 import heroBg from "./assets/img/heroBg.svg";
-import underline from "./assets/img/underline.svg";
 import semiEclipse from "./assets/img/semiEllipse.png";
 import agreement from "./assets/img/agreement.svg";
 import FifthCard from "./components/fifth/FifthCard";
@@ -108,17 +107,17 @@ const App: React.FC = () => {
               残業少なめ、ライフスタイル重視!
             </Typography>
             <Box
-              component="img"
-              src={underline}
-              alt=""
+              aria-hidden
               sx={{
                 position: 'absolute',
-                bottom: -4,
+                bottom: 4,
                 left: 0,
-                width: '100%',
-                height: 'auto',
+                right: 0,
+                height: '10px',
+                backgroundColor: 'rgba(248, 240, 124, 0.8)',
                 transform: 'rotate(3.48deg)',
                 pointerEvents: 'none',
+                zIndex: 0,
               }}
             />
           </Box>
