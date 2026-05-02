@@ -158,42 +158,6 @@ GitHub Actions が動かない場合のフォールバック：
 
 ---
 
-## 残タスク
-
-- [ ] **Xserver で `lp.chiba-kango.com` の無料独自 SSL 有効化**
-  - サーバーパネル → SSL設定 → `chiba-kango.com` 選択 → 「独自SSL設定追加」タブ → サイト `lp.chiba-kango.com` を選択して追加
-- [ ] HTTP → HTTPS リダイレクトを `.htaccess` に追加（SSL 有効化後）
-
-  ```apache
-  RewriteEngine On
-  RewriteCond %{HTTPS} !=on
-  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
-  ```
-
-- [ ] Vercel プロジェクトの停止/削除（不要になった時点で）
-- [ ] FTP パスワードのローテーション（要件定義書に平文記載されていたため）
-- [ ] CTA追従ボタン（スクロール時画面下部固定）の実装
-
----
-
-## 注意点
-
-- 純粋な静的 SPA（Vercel固有機能未使用）のため Xserver でそのまま動作します
-- クライアントサイドルーティング未使用。導入時は `.htaccess` に SPA フォールバックが必要：
-
-  ```apache
-  RewriteEngine On
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule . /index.html [L]
-  ```
-
-- `build/` は Git 管理対象外
-- ソースマップ (`*.map`) は本番アップロードに含まれます（CRA build既定）。気になる場合はワークフローの `exclude` に追加可能
-- **GTMタグ**は `public/index.html` に直書きされています（GTM-NCB4MH7C）
-
----
-
 ## 参考
 
 - [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started)
