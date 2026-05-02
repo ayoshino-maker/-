@@ -96,7 +96,7 @@ const App: React.FC = () => {
         }}
       >
         {/* 装飾画像 (背面レイヤー) */}
-        <Box component="img" src={heroEdited} alt="" sx={{ position: 'absolute', left: 67, top: 67, width: 118, height: 141, zIndex: 0, pointerEvents: 'none' }} />
+        <Box component="img" src={heroEdited} alt="" sx={{ position: 'absolute', left: 67, top: 30, width: 118, height: 141, zIndex: 0, pointerEvents: 'none' }} />
 
         {/* メインヒーロー画像 */}
         <Box component="img" src={heroMain} alt="ちば看護" sx={{ position: 'absolute', left: 0, top: 346, width: 393, height: 267, objectFit: 'cover', zIndex: 0 }} />
@@ -223,7 +223,7 @@ const App: React.FC = () => {
         </Box>
 
         {/* 千葉県密着実績 No.1 バッジ (最前面) */}
-        <Box component="img" src={heroBadge} alt="千葉県密着実績 No.1" sx={{ position: 'absolute', left: 255, top: 128, width: 138, height: 138, zIndex: 4, pointerEvents: 'none' }} />
+        <Box component="img" src={heroBadge} alt="千葉県密着実績 No.1" sx={{ position: 'absolute', left: 255, top: 50, width: 138, height: 138, zIndex: 4, pointerEvents: 'none' }} />
       </Box>
       </Box>
 
