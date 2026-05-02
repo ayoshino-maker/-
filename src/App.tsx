@@ -352,10 +352,10 @@ const App: React.FC = () => {
       {/* NinthSection */}
       <Container maxWidth="sm" sx={{ pt: 6 }}>
         <Stack spacing={3} alignItems="center">
-          <Typography  
-            fontWeight="bold" 
-            textAlign="center" 
-            sx={{ fontSize: 20, color: "#3448AC" }}
+          <Typography
+            fontWeight="bold"
+            textAlign="center"
+            sx={{ fontSize: 20, color: "#192C89" }}
           >
             よくある質問
           </Typography>
@@ -370,7 +370,7 @@ const App: React.FC = () => {
             />
             <NinthCard 
               questionText="千葉県以外の求人はありますか？" 
-              answerText="千葉県に隣接した地域の求人もご紹介可能です。"
+              answerText="原則、千葉県内の求人のみを扱っています。"
             />
           </Stack>
         </Stack>

@@ -28,7 +28,7 @@ const NinthCard = (props: { questionText: string; answerText: string }) => {
                     Q
                 </Typography>
                 </Box>
-                <Typography sx={{pl: 2, fontWeight: 700, fontSize: 14}}>
+                <Typography sx={{pl: 2, fontWeight: 700, fontSize: 14, color: '#303030'}}>
                     {props.questionText}
                 </Typography>
             </Box>
@@ -57,7 +57,7 @@ const NinthCard = (props: { questionText: string; answerText: string }) => {
                     A
                 </Typography>
                 </Box>
-                <Typography sx={{pl: 2, fontWeight: 500, fontSize: 12,  whiteSpace: 'pre-wrap' }}>
+                <Typography sx={{pl: 2, fontWeight: 500, fontSize: 12, color: '#303030', whiteSpace: 'pre-wrap' }}>
                     {props.answerText}
                 </Typography>
             </Box>
