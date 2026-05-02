@@ -68,19 +68,29 @@ const App: React.FC = () => {
           <CustomButton variant="smallest" />
         </Box>
       </Container>
-      {/* Hero */}
+      {/* Hero (393px設計をviewport幅にスケール) */}
       <Box
         sx={{
           position: 'relative',
           width: '100%',
-          maxWidth: 393,
-          mx: 'auto',
-          minHeight: 700,
+          aspectRatio: '393 / 700',
+          containerType: 'inline-size',
           backgroundImage: `url(${heroBg})`,
           backgroundSize: '100% auto',
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'top center',
           overflow: 'hidden',
+        }}
+      >
+      <Box
+        sx={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: 393,
+          height: 700,
+          transformOrigin: 'top left',
+          transform: 'scale(calc(100cqi / 393px))',
         }}
       >
         {/* 装飾画像 (背面レイヤー) */}
@@ -212,6 +222,7 @@ const App: React.FC = () => {
 
         {/* 千葉県密着実績 No.1 バッジ (最前面) */}
         <Box component="img" src={heroBadge} alt="千葉県密着実績 No.1" sx={{ position: 'absolute', left: 255, top: 128, width: 138, height: 138, zIndex: 4, pointerEvents: 'none' }} />
+      </Box>
       </Box>
 
       {/* SecondSection */}
