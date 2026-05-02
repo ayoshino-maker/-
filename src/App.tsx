@@ -5,9 +5,9 @@ import {
   Typography,
   Stack,
 } from "@mui/material";
-import secondSectionFirstImg from "./assets/img/secondSectionFirstImg.png";
-import secondSectionSecondImg from "./assets/img/secondSectionSecondFrameImg.png"
-import secondSectionThirdImg from "./assets/img/secondSectionThirdImg.png"
+import secondSectionFirstImg from "./assets/img/location.svg";
+import secondSectionSecondImg from "./assets/img/medicine.svg";
+import secondSectionThirdImg from "./assets/img/sharing.svg";
 import SecondCard from "./components/second/SecondCard";
 import ThirdCard from "./components/third/ThirdCard";
 import triangle from "./assets/img/triangle.png";
@@ -21,14 +21,21 @@ import hearing from "./assets/img/hearing.png";
 import introduceApplication from "./assets/img/introduceApplication.png";
 import interview from "./assets/img/interview.png";
 import huntedJob from "./assets/img/huntedJob.png";
-import tenthSectionImg from "./assets/img/tenthSectionImg.png";
+import tenthSectionImg from "./assets/img/resume.svg";
 import waveLine from "./assets/img/waveLine.png";
 import handShake from "./assets/img/handShake.png";
-import logo from "./assets/img/logo.png";
-import tibaPrefecture from "./assets/img/tibaPrefectureMap.png";
-import topManImage from "./assets/img/topManImage.png";
+import heroLogo from "./assets/img/heroLogo.png";
+import heroBg from "./assets/img/heroBg.svg";
+import heroMain from "./assets/img/heroMain.png";
+import heroEdited from "./assets/img/heroEdited.png";
+import heroPolaroid from "./assets/img/heroPolaroid.png";
+import heroNurse1 from "./assets/img/heroNurse1.png";
+import heroNurse2 from "./assets/img/heroNurse2.png";
+import heroBadge from "./assets/img/heroBadge.png";
+import lineIconLarge from "./assets/img/lineIconLarge.svg";
+import checkmark from "./assets/img/checkmark.svg";
 import semiEclipse from "./assets/img/semiEllipse.png";
-import construct from "./assets/img/construct.png";
+import agreement from "./assets/img/agreement.svg";
 import FifthCard from "./components/fifth/FifthCard";
 import SixthCard from "./components/sixth/SixthCard";
 import SeventhCard from "./components/seventh/SeventhCard";
@@ -36,7 +43,6 @@ import CustomButton from "./components/shared/buttons/CustomButton";
 import EighthCard from "./components/eighth/EighthCard";
 import NinthCard from "./components/ninth/NinthCard";
 import Footer from "./components/shared/footer/Footer";
-import FirstCard from "./components/first/FirstCard";
 
 const App: React.FC = () => {
   return (
@@ -44,61 +50,262 @@ const App: React.FC = () => {
         flexDirection: "column",      // 子を縦方向に並べる
         alignItems: "center",}}>
       {/* header */}
-      <Box maxWidth="sm" sx={{py: 2, width: "100%", display: "flex", alignItems: "center", justifyContent: 'space-between'}}>
-        <img src={logo} alt="header logo" style={{height: 22, padding: 12}}/>
-        <Box sx={{px: 3/2}}>
-          <CustomButton variant="smallest"/>
+      <Container
+        maxWidth="sm"
+        disableGutters
+        sx={{
+          position: 'sticky',
+          top: 0,
+          zIndex: 10,
+          py: 1,
+          backgroundColor: 'rgba(255,255,255,0.7)',
+          backdropFilter: 'blur(4px)',
+          display: "flex",
+          alignItems: "center",
+          justifyContent: 'space-between',
+        }}
+      >
+        <img src={heroLogo} alt="ちば看護" style={{ height: 17, padding: '0 12px' }} />
+        <Box sx={{ px: 3/2 }}>
+          <CustomButton variant="smallest" />
         </Box>
-      </Box>
-      {/* Hero */}
-      <Container maxWidth="sm" sx={{ px: 0}}>
-      <Box sx={{bgcolor: "#EAF3FF",backgroundImage: `url(${tibaPrefecture})`,backgroundPosition: "center", backgroundSize: "contain", overflow: "hidden", width: "100%", backgroundRepeat: "no-repeat"}}>
-        <Box position="relative">
-          <img src={topManImage} alt="トップ画像" style={{position: "absolute", bottom: 0, left: "50%", transform: "translateX(-50%)" }} />
-        <Stack spacing={3} sx={{px: 7/2, py: 7/2}}>
-          <Typography
-            fontWeight={800}
-            fontSize={24}
-          >
-            千葉
-            <Typography
-              component="span"
-              fontSize={18}
-              fontWeight={800}
-            >
-              で働く
-            </Typography>
-            看護師の、<br/>後悔
-            <Typography
-              component="span"
-              fontSize={18}
-              fontWeight={800}
-            >
-              しない
-            </Typography>
-            選択
-          </Typography>
-          <img src={logo} alt="ちば看護ロゴ"/>
-          <Typography
-            variant="body2"
-            textAlign="left"
-            sx={{ fontWeight: 600, fontSize: 12, whiteSpace: 'pre-wrap', color: '#192C89' }}
-          >
-            千葉県に特化した看護師専門転職エージェントです。<br/>「とりあえず登録」ではなく、<br/>あなたに合う職場だけを厳選して紹介します。
-          </Typography>
-
-          <Box sx={{ display: 'flex', flexDirection: 'row', gap: '3.05vw', justifyContent: 'center' }}>
-            <FirstCard mdTitle={"千葉県"} smTitle={"だけの\n求人を厳選"}/>
-            <FirstCard mdTitle={"千葉県在住"} smTitle={"\nスタッフが\n一貫サポート"}/>
-            <FirstCard firstSmTitle={"千葉県内の\n"} mdTitle={"非公開求人"} smTitle={"\n多数取扱あり"}/>
-          </Box>
-          <Box sx={{pt: 24, display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%'}}>
-            <CustomButton variant="large" />
-          </Box>
-        </Stack>
-        </Box>
-      </Box>
       </Container>
+      {/* Hero (393px設計をsm幅(600px)で固定スケール) */}
+      <Box
+        sx={{
+          position: 'relative',
+          width: '100%',
+          maxWidth: 600,
+          mx: 'auto',
+          aspectRatio: '393 / 700',
+          containerType: 'inline-size',
+          backgroundImage: `url(${heroBg})`,
+          backgroundSize: '100% auto',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'top center',
+          overflow: 'hidden',
+        }}
+      >
+      <Box
+        sx={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: 393,
+          height: 700,
+          transformOrigin: 'top left',
+          transform: 'scale(calc(100cqi / 393px))',
+        }}
+      >
+        {/* 装飾画像 (背面レイヤー) */}
+        <Box component="img" src={heroEdited} alt="" sx={{ position: 'absolute', left: 67, top: 10, width: 118, height: 141, zIndex: 0, pointerEvents: 'none' }} />
+
+        {/* メインヒーロー画像 */}
+        <Box component="img" src={heroMain} alt="ちば看護" sx={{ position: 'absolute', left: 0, top: 309, width: 433, height: 267, objectFit: 'cover', objectPosition: 'right center', zIndex: 0 }} />
+
+        {/* ポラロイド風カード */}
+        <Box sx={{ position: 'absolute', left: 14, top: 459, width: 183, height: 122, transform: 'rotate(-3.1deg)', zIndex: 1, border: '4px solid #FFFFFF', boxShadow: '0 4px 4px rgba(0,0,0,0.25)', overflow: 'hidden' }}>
+          <Box component="img" src={heroPolaroid} alt="" sx={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+        </Box>
+
+        {/* 看護師写真 */}
+        <Box component="img" src={heroNurse1} alt="" sx={{ position: 'absolute', left: 240, top: 548, width: 92, height: 89, zIndex: 6 }} />
+        <Box component="img" src={heroNurse2} alt="" sx={{ position: 'absolute', left: 305, top: 568, width: 72, height: 72, zIndex: 7 }} />
+
+        {/* 年収リボンバナー(下層) */}
+        <Box
+          sx={{
+            position: 'absolute',
+            left: -4,
+            top: 157,
+            width: 'auto',
+            zIndex: 2,
+            pointerEvents: 'none',
+            transform: 'rotate(-4deg)',
+            transformOrigin: 'left center',
+          }}
+        >
+          <Box
+            sx={{
+              backgroundColor: '#FD527B',
+              px: 2,
+              py: '2px',
+              display: 'inline-flex',
+              alignItems: 'baseline',
+              gap: '4px',
+            }}
+          >
+            <Typography component="span" sx={{ fontSize: 16, fontWeight: 700, color: '#FFFFFF', lineHeight: 1.5, whiteSpace: 'nowrap' }}>
+              年収
+            </Typography>
+            <Typography component="span" sx={{ color: '#F8F07C', fontWeight: 900, fontSize: 26, fontFamily: 'Helvetica, sans-serif', lineHeight: 1.5, whiteSpace: 'nowrap' }}>
+              400
+            </Typography>
+            <Typography component="span" sx={{ fontSize: 16, fontWeight: 700, color: '#FFFFFF', lineHeight: 1.5, whiteSpace: 'nowrap' }}>
+              万円からの
+            </Typography>
+            <Typography component="span" sx={{ fontSize: 16, fontWeight: 700, color: '#F8F07C', lineHeight: 1.5, whiteSpace: 'nowrap' }}>
+              高給与
+            </Typography>
+            <Typography component="span" sx={{ fontSize: 16, fontWeight: 700, color: '#FFFFFF', lineHeight: 1.5, whiteSpace: 'nowrap' }}>
+              案件!
+            </Typography>
+          </Box>
+        </Box>
+
+        {/* 回転コールアウトカード(前面) */}
+        <Box
+          sx={{
+            position: 'absolute',
+            left: -18,
+            top: 178,
+            width: 429,
+            height: 147,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            zIndex: 3,
+          }}
+        >
+          <Box
+            sx={{
+              transform: 'rotate(-4deg)',
+              width: 422,
+              backgroundColor: '#FFFFFF',
+              pt: '12px',
+              pb: '12px',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              justifyContent: 'center',
+              overflow: 'hidden',
+            }}
+          >
+            <Typography sx={{ color: '#303030', fontWeight: 700, fontSize: 20, lineHeight: 1.46, whiteSpace: 'nowrap' }}>
+              今の職場と同じ時間で、
+            </Typography>
+            <Box sx={{ position: 'relative', display: 'inline-block', mt: '4px' }}>
+              <Typography
+                sx={{
+                  color: 'rgba(255,41,93,0.8)',
+                  fontWeight: 700,
+                  fontSize: 20,
+                  lineHeight: 1.46,
+                  whiteSpace: 'nowrap',
+                  position: 'relative',
+                  zIndex: 1,
+                }}
+              >
+                残業少なめ、ライフスタイル重視!
+              </Typography>
+              <Box
+                aria-hidden
+                sx={{
+                  position: 'absolute',
+                  bottom: 2,
+                  left: 0,
+                  right: 0,
+                  height: '10px',
+                  backgroundColor: 'rgba(248, 240, 124, 0.8)',
+                  pointerEvents: 'none',
+                  zIndex: 0,
+                }}
+              />
+            </Box>
+            <Typography sx={{ mt: '4px', color: '#303030', fontWeight: 700, fontSize: 24, lineHeight: 1.46, whiteSpace: 'nowrap' }}>
+              <Box
+                component="span"
+                sx={{ color: 'rgba(255,41,93,0.8)', fontWeight: 900, fontSize: 28 }}
+              >
+                ちば看護
+              </Box>
+              で理想の職場へ!
+            </Typography>
+          </Box>
+        </Box>
+
+        {/* 3つの白チェックバッジ */}
+        <Box sx={{ position: 'absolute', left: 12, top: 342, display: 'flex', flexDirection: 'column', gap: '4px', alignItems: 'flex-start', zIndex: 3 }}>
+          {['完全無料', 'LINEで簡単相談', '非公開求人多数'].map((label) => (
+            <Box
+              key={label}
+              sx={{
+                backgroundColor: '#FFFFFF',
+                filter: 'drop-shadow(0px 2px 2px rgba(0,0,0,0.25))',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '10px',
+                px: '8px',
+                py: '2px',
+                borderRadius: '2px',
+              }}
+            >
+              <Box component="img" src={checkmark} alt="" sx={{ width: 18, height: 18 }} />
+              <Typography sx={{ fontWeight: 700, fontSize: 18, color: '#303030', lineHeight: 1.5, whiteSpace: 'nowrap' }}>
+                {label}
+              </Typography>
+            </Box>
+          ))}
+        </Box>
+
+        {/* 緑LINE CTA ボタン */}
+        <Box
+          component="a"
+          href="https://lin.ee/QuLYzOh"
+          target="_blank"
+          rel="noopener noreferrer"
+          sx={{
+            position: 'absolute',
+            left: 'calc(50% + 1px)',
+            top: 622,
+            transform: 'translateX(-50%)',
+            width: 300,
+            backgroundColor: '#289E4B',
+            boxShadow: '0 4px 0 #157815',
+            borderRadius: '40px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: '8px',
+            px: '24px',
+            py: '8px',
+            textDecoration: 'none',
+            zIndex: 3,
+            cursor: 'pointer',
+            '&:hover': { backgroundColor: '#22853f' },
+          }}
+        >
+          <Box component="img" src={lineIconLarge} alt="" sx={{ width: 36, height: 36 }} />
+          <Typography sx={{ fontWeight: 700, fontSize: 16, color: '#FFFFFF', lineHeight: 1.46 }}>
+            LINEで専任アドバイザーに相談
+          </Typography>
+        </Box>
+
+        {/* 黄色吹き出しタグ (緑CTAの前面に表示) */}
+        <Box
+          sx={{
+            position: 'absolute',
+            left: 'calc(50% - 29.5px)',
+            top: 604,
+            transform: 'translateX(-50%)',
+            backgroundColor: '#F9F396',
+            border: '2px solid #FFF344',
+            borderRadius: '6px',
+            boxShadow: '0 4px 4px rgba(0,0,0,0.25)',
+            px: '8px',
+            py: '4px',
+            zIndex: 5,
+          }}
+        >
+          <Typography sx={{ fontWeight: 700, fontSize: 12, color: '#303030', lineHeight: 1.46, whiteSpace: 'nowrap' }}>
+            無料でスマホで相談OK!
+          </Typography>
+        </Box>
+
+        {/* 千葉県密着実績 No.1 バッジ (最前面) */}
+        <Box component="img" src={heroBadge} alt="千葉県密着実績 No.1" sx={{ position: 'absolute', left: 272, top: 91, width: 120, height: 120, zIndex: 4, pointerEvents: 'none' }} />
+      </Box>
+      </Box>
 
       {/* SecondSection */}
       <Container maxWidth="sm" sx={{ pt: 6, }}>
@@ -111,20 +318,23 @@ const App: React.FC = () => {
             看護師専門の転職エージェント
           </Typography>
           <Stack spacing={2} sx={{ py: 3 }}>
-            <SecondCard 
-              tile={"千葉県内に特化したエージェント"} 
-              description={"千葉県に根ざした独自ネットワークで、病院、クリニック、介護施設、訪問看護まで幅広い求\n人をご提案します。"} 
+            <SecondCard
+              tile={"千葉県内に特化したエージェント"}
+              description={"千葉県に根ざした独自ネットワークで、病院、クリニック、介護施設、訪問看護など幅広い求\n人をご提案します。"}
               imagePath={secondSectionFirstImg}
+              imageWidthPercent={41}
             />
-            <SecondCard 
-              tile={"地域事情・職場内の雰囲気までご提案"} 
-              description={"各施設の雰囲気や人間関係、忙しさなど、求人票では分からない内部情報までお伝えします。"} 
+            <SecondCard
+              tile={"地域事情・職場内の雰囲気までご提案"}
+              description={"各施設の雰囲気や人間関係、忙しさなど、求人票では分からない内部情報までお伝えします。"}
               imagePath={secondSectionSecondImg}
+              imageWidthPercent={64}
             />
-            <SecondCard 
-              tile={"応募から入職後まで一貫サポート"} 
-              description={"面談・書類添削・条件交渉から入職後の悩み相談まで、千葉在住の担当が継続して支援します。"} 
+            <SecondCard
+              tile={"応募から入職後まで一貫サポート"}
+              description={"面談・書類添削・条件交渉から入職後の悩み相談まで、千葉在住の担当が継続して支援します。"}
               imagePath={secondSectionThirdImg}
+              imageWidthPercent={54}
             />
             </Stack>
         </Stack>
@@ -151,6 +361,7 @@ const App: React.FC = () => {
             </Typography>
             <Stack spacing={1} sx={{ px: 2 }}>
               <ThirdCard description={"千葉で転職したいけど、\nどの求人がいいか分からない"} />
+              <ThirdCard description={"エージェントに登録したら、\nしつこく電話がきそうで不安"} />
               <ThirdCard description={"都内勤務と千葉勤務、\nどちらが自分に合うのか分からない"} />
               <ThirdCard description={"人間関係や職場の雰囲気など、\n求人票に書いていない情報が知りたい"} />
             </Stack>
@@ -169,7 +380,7 @@ const App: React.FC = () => {
 
       <Container maxWidth="sm" sx={{ px: {xs: 0},pt: 5 , display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <Box component="span"  sx={{py: 1, px: 4,      width: "fit-content", height: "fit-content", display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '16px', backgroundColor: '#604045'}}>
-          <Typography sx={{fontSize: 14, fontWeight: 600, color: '#FFFFFF', textAlign: 'center', letterSpacing: '6px' }}>
+          <Typography sx={{fontSize: 14, fontWeight: 600, color: '#FFFFFF', textAlign: 'center', letterSpacing: '4.2px' }}>
             その転職のお悩み
           </Typography>
         </Box>
@@ -250,10 +461,10 @@ const App: React.FC = () => {
       {/* SixthSection */}
       <Container maxWidth="sm" sx={{ mt: 6,pt: 4, px: 2, backgroundColor: "#FEF0F6" }}>
         <Stack spacing={3} alignItems="center">
-          <Typography  
-            fontWeight="bold" 
-            textAlign="center" 
-            sx={{ fontSize: 20, color: "#3448AC" }}
+          <Typography
+            fontWeight="bold"
+            textAlign="center"
+            sx={{ fontSize: 20, color: "#192C89" }}
           >
             ちば看護が選ばれる理由
           </Typography>
@@ -289,14 +500,15 @@ const App: React.FC = () => {
       <img src={semiEclipse} alt="Semi Eclipse" style={{ position: 'relative', left: '50%', transform: 'translateX(-50%)', width: '100%', height: 'auto', }} />
       <Box
         component="img"
-        src={construct}            // 例: import newImage from '...';
-        alt="New Image"
+        src={agreement}
+        alt="Agreement"
         sx={{
           width: "149px",
+          height: "169px",
           position: 'absolute',
-          left: '50%',            
-          bottom: 16,             
-          transform: 'translateX(-50%)', // 画像幅の半分だけ戻して中央揃え
+          left: '50%',
+          bottom: 16,
+          transform: 'translateX(-50%)',
         }}
       />
       </Box>
@@ -316,7 +528,7 @@ const App: React.FC = () => {
             <SeventhCard 
               circleImageUrl={seventhSectionFirstFaceImg} 
               jobTitle={"30代女性　病棟看護師（千葉市）"} 
-              jobDescription={"夜勤が辛く転職。日勤のみのクリニックへ。\n年収はほぼ維持、生活リズムは改善しました。\n大手転職サイトのような、しつこい電話など\n一切なくやりとりがスムーズでした"}
+              jobDescription={"夜勤が辛く転職。日勤のみのクリニックへ。\n年収はほぼ維持、生活リズムは改善しました。"}
             />
             <SeventhCard 
               circleImageUrl={seventhSectionSecondFaceImg} 
@@ -339,11 +551,11 @@ const App: React.FC = () => {
           </Typography>
           {/* ここで親の Stack に width: '100%' を指定 */}
           <Stack spacing={1} sx={{ width: "100%", px: 5/2}}>
-            <EighthCard stepText={"STEP 01"} description={"無料登録"} iconUrl={freeRegister} />
-            <EighthCard stepText={"STEP 02"} description={"ヒアリング"} subDescription={"（電話・オンライン可）"} iconUrl={hearing} />
-            <EighthCard stepText={"STEP 03"} description={"求人紹介"} iconUrl={introduceApplication} />
-            <EighthCard stepText={"STEP 04"} description={"面接・条件交渉"} iconUrl={interview} />
-            <EighthCard stepText={"STEP 05"} description={"内定・入職"} iconUrl={huntedJob} />
+            <EighthCard stepText={"STEP 1"} description={"無料登録"} iconUrl={freeRegister} />
+            <EighthCard stepText={"STEP 2"} description={"ヒアリング"} subDescription={"（電話・オンライン可）"} iconUrl={hearing} />
+            <EighthCard stepText={"STEP 3"} description={"求人紹介"} iconUrl={introduceApplication} />
+            <EighthCard stepText={"STEP 4"} description={"面接・条件交渉"} iconUrl={interview} />
+            <EighthCard stepText={"STEP 5"} description={"内定・入職"} iconUrl={huntedJob} />
           </Stack>
           <CustomButton />
         </Stack>
@@ -352,10 +564,10 @@ const App: React.FC = () => {
       {/* NinthSection */}
       <Container maxWidth="sm" sx={{ pt: 6 }}>
         <Stack spacing={3} alignItems="center">
-          <Typography  
-            fontWeight="bold" 
-            textAlign="center" 
-            sx={{ fontSize: 20, color: "#3448AC" }}
+          <Typography
+            fontWeight="bold"
+            textAlign="center"
+            sx={{ fontSize: 20, color: "#192C89" }}
           >
             よくある質問
           </Typography>
@@ -370,7 +582,7 @@ const App: React.FC = () => {
             />
             <NinthCard 
               questionText="千葉県以外の求人はありますか？" 
-              answerText="千葉県に隣接した地域の求人もご紹介可能です。"
+              answerText="原則、千葉県内の求人のみを扱っています。"
             />
           </Stack>
         </Stack>

@@ -34,7 +34,7 @@ const SeventhCard = (props: SeventhCardProps) => {
                         objectFit: "cover",  // 画像をトリミングしてフィット
                     }}
                     />
-                    <Typography variant="body2" fontWeight="bold" color="#FD527B" textAlign="center" sx={{ fontSize: 14, whiteSpace: 'pre-wrap' }}>
+                    <Typography variant="body2" fontWeight="bold" color="#FD527B" textAlign="center" sx={{ fontSize: 12, whiteSpace: 'pre-wrap' }}>
                         {props.jobTitle}
                     </Typography>
                     <Divider

@@ -32,7 +32,7 @@ const CustomButton = ({variant = 'small',
         onClick={handleLineOpen}
         sx={{
             py: isSmall ? 1 : isSmallest ? 2 : 3,
-            borderRadius: isSmall ? 1/2 :isSmallest ? 1 : 2,
+            borderRadius: isSmall ? 1/2 :isSmallest ? 1 : 4,
             padding: isSmall ? '8px 44px' : isSmallest ?  '4px 12px' : '16px 44px',
             backgroundColor: '#FF295DCC',
             opacity: 1,

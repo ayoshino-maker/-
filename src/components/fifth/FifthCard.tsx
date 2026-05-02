@@ -26,7 +26,7 @@ const FifthCard: React.FC<{ title: string; imgUrl: string; firstDescription: str
                         sx={{
                             fontWeight: 600,
                             fontSize: '14px',
-                            color: '#000000',
+                            color: '#303030',
                             whiteSpace: 'pre-wrap', 
                         }}
                     >・</Typography>
@@ -35,7 +35,7 @@ const FifthCard: React.FC<{ title: string; imgUrl: string; firstDescription: str
                         sx={{
                             fontWeight: 600,
                             fontSize: '14px',
-                            color: '#000000',
+                            color: '#303030',
                             whiteSpace: 'pre-wrap', 
                         }}
                     >
@@ -49,7 +49,7 @@ const FifthCard: React.FC<{ title: string; imgUrl: string; firstDescription: str
                         sx={{
                             fontWeight: 600,
                             fontSize: '14px',
-                            color: '#000000',
+                            color: '#303030',
                             whiteSpace: 'pre-wrap', 
                         }}
                     >・</Typography>
@@ -58,7 +58,7 @@ const FifthCard: React.FC<{ title: string; imgUrl: string; firstDescription: str
                         sx={{
                             fontWeight: 600,
                             fontSize: '14px',
-                            color: '#000000',
+                            color: '#303030',
                             whiteSpace: 'pre-wrap', 
                         }}
                     >
