@@ -4,6 +4,8 @@ type Props = {
     tile: string;
     description: string;
     imagePath: string;
+    imageWidth?: number;
+    imageHeight?: number;
 };
 const SecondCard=(props: Props)=> {
     return (
@@ -45,7 +47,9 @@ const SecondCard=(props: Props)=> {
                 <img
                     src={props.imagePath}
                     alt={props.tile}
-                    style={{ maxHeight: '100%', maxWidth: '100%', width: 'auto', height: 'auto', objectFit: 'contain' }}
+                    width={props.imageWidth}
+                    height={props.imageHeight}
+                    style={{ maxHeight: '100%', maxWidth: '100%', objectFit: 'contain' }}
                 />
             </Box>
           <Typography sx={{ fontWeight: 600 , fontSize: '14px', textAlign: 'start'}}>
