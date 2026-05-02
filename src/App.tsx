@@ -26,6 +26,7 @@ import waveLine from "./assets/img/waveLine.png";
 import handShake from "./assets/img/handShake.png";
 import heroLogo from "./assets/img/heroLogo.png";
 import heroBg from "./assets/img/heroBg.svg";
+import underline from "./assets/img/underline.svg";
 import semiEclipse from "./assets/img/semiEllipse.png";
 import agreement from "./assets/img/agreement.svg";
 import FifthCard from "./components/fifth/FifthCard";
@@ -75,7 +76,90 @@ const App: React.FC = () => {
           backgroundPosition: 'top center',
         }}
       >
-        {/* Hero content will be rebuilt in subsequent phases */}
+        {/* 回転コールアウトカード */}
+        <Box
+          sx={{
+            mx: 'auto',
+            mt: 3,
+            width: 'fit-content',
+            backgroundColor: '#FFFFFF',
+            borderRadius: '8px',
+            boxShadow: '0 2px 6px rgba(0,0,0,0.08)',
+            px: 2,
+            py: 2,
+            transform: 'rotate(-4deg)',
+            textAlign: 'center',
+          }}
+        >
+          <Typography sx={{ color: '#303030', fontWeight: 700, fontSize: 18, lineHeight: 1.4 }}>
+            今の職場と同じ時間で、
+          </Typography>
+          <Box sx={{ position: 'relative', display: 'inline-block', mt: 0.5 }}>
+            <Typography
+              sx={{
+                color: 'rgba(255,41,93,0.8)',
+                fontWeight: 700,
+                fontSize: 18,
+                lineHeight: 1.4,
+                position: 'relative',
+                zIndex: 1,
+              }}
+            >
+              残業少なめ、ライフスタイル重視!
+            </Typography>
+            <Box
+              component="img"
+              src={underline}
+              alt=""
+              sx={{
+                position: 'absolute',
+                bottom: -4,
+                left: 0,
+                width: '100%',
+                height: 'auto',
+                transform: 'rotate(3.48deg)',
+                pointerEvents: 'none',
+              }}
+            />
+          </Box>
+          <Typography sx={{ mt: 1.5, color: '#303030', fontWeight: 700, fontSize: 22, lineHeight: 1.3 }}>
+            <Box
+              component="span"
+              sx={{ color: 'rgba(255,41,93,0.8)', fontWeight: 900, fontSize: 26 }}
+            >
+              ちば看護
+            </Box>
+            で理想の職場へ!
+          </Typography>
+        </Box>
+
+        {/* 年収リボンバナー */}
+        <Box
+          sx={{
+            mx: 'auto',
+            mt: 5,
+            width: '90%',
+            backgroundColor: '#FD527B',
+            color: '#FFFFFF',
+            transform: 'rotate(-4deg)',
+            textAlign: 'center',
+            py: 1.25,
+            px: 2,
+            boxShadow: '0 2px 4px rgba(0,0,0,0.08)',
+          }}
+        >
+          <Typography sx={{ fontSize: 20, fontWeight: 700, color: '#FFFFFF', lineHeight: 1.2 }}>
+            年収{' '}
+            <Box component="span" sx={{ color: '#F8F07C', fontWeight: 900, fontSize: 26, fontFamily: 'Helvetica, sans-serif' }}>
+              400
+            </Box>
+            {' '}万円からの{' '}
+            <Box component="span" sx={{ color: '#F8F07C', fontWeight: 900 }}>
+              高給与
+            </Box>
+            {' '}案件!
+          </Typography>
+        </Box>
       </Container>
 
       {/* SecondSection */}
