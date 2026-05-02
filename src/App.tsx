@@ -85,7 +85,6 @@ const App: React.FC = () => {
       >
         {/* 装飾画像 (背面レイヤー) */}
         <Box component="img" src={heroEdited} alt="" sx={{ position: 'absolute', left: 67, top: 67, width: 118, height: 141, zIndex: 0, pointerEvents: 'none' }} />
-        <Box component="img" src={heroBadge} alt="" sx={{ position: 'absolute', left: 255, top: 128, width: 138, height: 138, zIndex: 0, pointerEvents: 'none' }} />
 
         {/* メインヒーロー画像 */}
         <Box component="img" src={heroMain} alt="ちば看護" sx={{ position: 'absolute', left: 0, top: 346, width: 393, height: 267, objectFit: 'cover', zIndex: 0 }} />
@@ -105,44 +104,37 @@ const App: React.FC = () => {
             position: 'absolute',
             left: -4,
             top: 194,
-            width: 280,
-            height: 62,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
+            width: 'auto',
             zIndex: 2,
             pointerEvents: 'none',
+            transform: 'rotate(-4deg)',
+            transformOrigin: 'left center',
           }}
         >
           <Box
             sx={{
-              transform: 'rotate(-4deg)',
               backgroundColor: '#FD527B',
               px: 2,
               py: '2px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
+              display: 'inline-flex',
+              alignItems: 'baseline',
+              gap: '4px',
             }}
           >
-            <Typography
-              sx={{
-                fontSize: 16,
-                fontWeight: 700,
-                color: '#FFFFFF',
-                lineHeight: 1.5,
-                whiteSpace: 'nowrap',
-              }}
-            >
-              年収{' '}
-              <Box component="span" sx={{ color: '#F8F07C', fontWeight: 900, fontSize: 26, fontFamily: 'Helvetica, sans-serif' }}>
-                400
-              </Box>
-              {' '}万円からの{' '}
-              <Box component="span" sx={{ color: '#F8F07C' }}>
-                高給与
-              </Box>
-              {' '}案件!
+            <Typography component="span" sx={{ fontSize: 16, fontWeight: 700, color: '#FFFFFF', lineHeight: 1.5, whiteSpace: 'nowrap' }}>
+              年収
+            </Typography>
+            <Typography component="span" sx={{ color: '#F8F07C', fontWeight: 900, fontSize: 26, fontFamily: 'Helvetica, sans-serif', lineHeight: 1.5, whiteSpace: 'nowrap' }}>
+              400
+            </Typography>
+            <Typography component="span" sx={{ fontSize: 16, fontWeight: 700, color: '#FFFFFF', lineHeight: 1.5, whiteSpace: 'nowrap' }}>
+              万円からの
+            </Typography>
+            <Typography component="span" sx={{ fontSize: 16, fontWeight: 700, color: '#F8F07C', lineHeight: 1.5, whiteSpace: 'nowrap' }}>
+              高給与
+            </Typography>
+            <Typography component="span" sx={{ fontSize: 16, fontWeight: 700, color: '#FFFFFF', lineHeight: 1.5, whiteSpace: 'nowrap' }}>
+              案件!
             </Typography>
           </Box>
         </Box>
@@ -175,10 +167,10 @@ const App: React.FC = () => {
               overflow: 'hidden',
             }}
           >
-            <Typography sx={{ color: '#303030', fontWeight: 700, fontSize: 20, lineHeight: 1.46, whiteSpace: 'nowrap', mb: '-22px' }}>
+            <Typography sx={{ color: '#303030', fontWeight: 700, fontSize: 20, lineHeight: 1.46, whiteSpace: 'nowrap' }}>
               今の職場と同じ時間で、
             </Typography>
-            <Box sx={{ position: 'relative', display: 'inline-block', mt: '24px' }}>
+            <Box sx={{ position: 'relative', display: 'inline-block', mt: '4px' }}>
               <Typography
                 sx={{
                   color: 'rgba(255,41,93,0.8)',
@@ -217,6 +209,9 @@ const App: React.FC = () => {
             </Typography>
           </Box>
         </Box>
+
+        {/* 千葉県密着実績 No.1 バッジ (最前面) */}
+        <Box component="img" src={heroBadge} alt="千葉県密着実績 No.1" sx={{ position: 'absolute', left: 255, top: 128, width: 138, height: 138, zIndex: 4, pointerEvents: 'none' }} />
       </Box>
 
       {/* SecondSection */}
