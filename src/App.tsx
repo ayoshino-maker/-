@@ -259,7 +259,7 @@ const App: React.FC = () => {
             left: 'calc(50% + 1px)',
             top: 622,
             transform: 'translateX(-50%)',
-            width: 345,
+            width: 300,
             backgroundColor: '#289E4B',
             boxShadow: '0 4px 0 #157815',
             borderRadius: '40px',
