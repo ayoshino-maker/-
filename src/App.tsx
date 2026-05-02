@@ -101,7 +101,7 @@ const App: React.FC = () => {
         <Box component="img" src={heroEdited} alt="" sx={{ position: 'absolute', left: 67, top: 10, width: 118, height: 141, zIndex: 0, pointerEvents: 'none' }} />
 
         {/* メインヒーロー画像 */}
-        <Box component="img" src={heroMain} alt="ちば看護" sx={{ position: 'absolute', left: 40, top: 309, width: 393, height: 267, objectFit: 'cover', zIndex: 0 }} />
+        <Box component="img" src={heroMain} alt="ちば看護" sx={{ position: 'absolute', left: 0, top: 309, width: 433, height: 267, objectFit: 'cover', objectPosition: 'right center', zIndex: 0 }} />
 
         {/* ポラロイド風カード */}
         <Box sx={{ position: 'absolute', left: 14, top: 459, width: 183, height: 122, transform: 'rotate(-3.1deg)', zIndex: 1, border: '4px solid #FFFFFF', boxShadow: '0 4px 4px rgba(0,0,0,0.25)', overflow: 'hidden' }}>
