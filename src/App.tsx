@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import {
   Box,
   Container,
@@ -29,10 +29,7 @@ import heroBg from "./assets/img/heroBg.svg";
 import heroMain from "./assets/img/heroMain.png";
 import heroEdited from "./assets/img/heroEdited.png";
 import heroPolaroid from "./assets/img/heroPolaroid.png";
-import heroNurse1 from "./assets/img/heroNurse1.png";
-import heroNurse2 from "./assets/img/heroNurse2.png";
 import heroBadge from "./assets/img/heroBadge.png";
-import lineIconLarge from "./assets/img/lineIconLarge.svg";
 import checkmark from "./assets/img/checkmark.svg";
 import semiEclipse from "./assets/img/semiEllipse.png";
 import agreement from "./assets/img/agreement.svg";
@@ -43,8 +40,12 @@ import CustomButton from "./components/shared/buttons/CustomButton";
 import EighthCard from "./components/eighth/EighthCard";
 import NinthCard from "./components/ninth/NinthCard";
 import Footer from "./components/shared/footer/Footer";
+import LineCtaBlock from "./components/shared/cta/LineCtaBlock";
+import StickyLineCta from "./components/shared/cta/StickyLineCta";
 
 const App: React.FC = () => {
+  const heroCtaRef = useRef<HTMLAnchorElement>(null);
+
   return (
     <Box  sx={{ bgcolor: "#fafafa" , mx: 0, display: "flex",
         flexDirection: "column",      // 子を縦方向に並べる
@@ -107,10 +108,6 @@ const App: React.FC = () => {
         <Box sx={{ position: 'absolute', left: 14, top: 459, width: 183, height: 122, transform: 'rotate(-3.1deg)', zIndex: 1, border: '4px solid #FFFFFF', boxShadow: '0 4px 4px rgba(0,0,0,0.25)', overflow: 'hidden' }}>
           <Box component="img" src={heroPolaroid} alt="" sx={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
         </Box>
-
-        {/* 看護師写真 */}
-        <Box component="img" src={heroNurse1} alt="" sx={{ position: 'absolute', left: 240, top: 548, width: 92, height: 89, zIndex: 6 }} />
-        <Box component="img" src={heroNurse2} alt="" sx={{ position: 'absolute', left: 305, top: 568, width: 72, height: 72, zIndex: 7 }} />
 
         {/* 年収リボンバナー(下層) */}
         <Box
@@ -248,58 +245,17 @@ const App: React.FC = () => {
           ))}
         </Box>
 
-        {/* 緑LINE CTA ボタン */}
+        {/* CTAブロック (緑LINE CTA + 黄色吹き出し + 男性画像 + No.1バッジ) */}
         <Box
-          component="a"
-          href="https://lin.ee/QuLYzOh"
-          target="_blank"
-          rel="noopener noreferrer"
           sx={{
             position: 'absolute',
             left: 'calc(50% + 1px)',
             top: 622,
             transform: 'translateX(-50%)',
-            width: 300,
-            backgroundColor: '#289E4B',
-            boxShadow: '0 4px 0 #157815',
-            borderRadius: '40px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            gap: '8px',
-            px: '24px',
-            py: '8px',
-            textDecoration: 'none',
             zIndex: 3,
-            cursor: 'pointer',
-            '&:hover': { backgroundColor: '#22853f' },
           }}
         >
-          <Box component="img" src={lineIconLarge} alt="" sx={{ width: 36, height: 36 }} />
-          <Typography sx={{ fontWeight: 700, fontSize: 16, color: '#FFFFFF', lineHeight: 1.46 }}>
-            LINEで専任アドバイザーに相談
-          </Typography>
-        </Box>
-
-        {/* 黄色吹き出しタグ (緑CTAの前面に表示) */}
-        <Box
-          sx={{
-            position: 'absolute',
-            left: 'calc(50% - 29.5px)',
-            top: 604,
-            transform: 'translateX(-50%)',
-            backgroundColor: '#F9F396',
-            border: '2px solid #FFF344',
-            borderRadius: '6px',
-            boxShadow: '0 4px 4px rgba(0,0,0,0.25)',
-            px: '8px',
-            py: '4px',
-            zIndex: 5,
-          }}
-        >
-          <Typography sx={{ fontWeight: 700, fontSize: 12, color: '#303030', lineHeight: 1.46, whiteSpace: 'nowrap' }}>
-            無料でスマホで相談OK!
-          </Typography>
+          <LineCtaBlock ref={heroCtaRef} />
         </Box>
 
         {/* 千葉県密着実績 No.1 バッジ (最前面) */}
@@ -607,6 +563,9 @@ const App: React.FC = () => {
       <Box maxWidth="sm" sx={{ width: '100%', bgcolor: "#ffffff"}}>
         <Footer/>
       </Box>
+
+      {/* スクロール時、ヒーローCTAが画面外に出たら下部固定表示 */}
+      <StickyLineCta observeRef={heroCtaRef} />
     </Box>
   );
 };
